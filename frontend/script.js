@@ -12,7 +12,7 @@ async function getRecommendation() {
   loader.classList.remove("hidden");
 
   try {
-    const response = await fetch("http://localhost:3000/recommend", {
+    const response = await fetch("https://weather-node-bridge.onrender.com/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ city })
