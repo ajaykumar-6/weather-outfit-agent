@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Outfit AI</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <div class="card">
+        <h1>👗 Weather Outfit AI</h1>
+        <p class="subtitle">Smart outfit suggestions based on live weather</p>
+
+        <div class="input-group">
+          <input
+            id="city"
+            type="text"
+            placeholder="Start typing a city..."
+            onkeyup="fetchCities()"
+          />
+          <div id="suggestions"></div>
+        </div>
+
+        <button onclick="getRecommendation()">Get Outfit</button>
+
+        <div id="loader" class="loader hidden"></div>
+
+        <div id="output" class="output"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
