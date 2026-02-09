@@ -61,7 +61,7 @@ AI_Specialist/
 
 ```
 
-##▶️ Installation & Setup
+## ▶️ Installation & Setup
 
 ### 1. Start the Python AI Agent
 
@@ -92,10 +92,10 @@ Recommended Outfit:
 
 👟 Footwear: Comfortable Sneakers
 
-##👤 Author
+## 👤 Author
 Ajaykumar AI & Full-Stack Development Enthusiast
 
-##📜 License
+## 📜 License
 This project is intended for educational purposes only.
 
 
