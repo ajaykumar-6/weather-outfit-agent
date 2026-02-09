@@ -47,17 +47,24 @@ async function fetchCities() {
     return;
   }
 
-  const response = await fetch(
-    `http://localhost:3000/cities?q=${encodeURIComponent(input)}`
-  );
-  const cities = await response.json();
+  try {
+    const response = await fetch(
+      `https://weather-node-bridge.onrender.com/cities?q=${encodeURIComponent(input)}`
+    );
 
-  suggestionsDiv.innerHTML = cities
-    .map(
-      c => `<div onclick="selectCity('${c.name}')">${c.name}</div>`
-    )
-    .join("");
+    const cities = await response.json();
+
+    suggestionsDiv.innerHTML = cities
+      .map(
+        c => `<div onclick="selectCity('${c.name}')">${c.name}</div>`
+      )
+      .join("");
+  } catch (error) {
+    console.error("City fetch error:", error);
+    suggestionsDiv.innerHTML = "";
+  }
 }
+
 
 function selectCity(city) {
   document.getElementById("city").value = city;
