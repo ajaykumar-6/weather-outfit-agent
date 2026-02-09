@@ -47,7 +47,7 @@ app.get("/cities", async (req, res) => {
 app.post("/recommend", async (req, res) => {
   try {
     const response = await axios.post(
-      "https://weather-outfit-agent.onrender.com",
+      "https://weather-outfit-agent.onrender.com/predict",
       { city: req.body.city }
     );
 
